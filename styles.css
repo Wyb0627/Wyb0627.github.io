@@ -1,0 +1,680 @@
+:root {
+    --primary-color: #111827;
+    --secondary-color: #2563eb;
+    --text-color: #111827;
+    --muted-color: #6b7280;
+    --background-color: #ffffff;
+    --section-background: transparent;
+    --border-color: #e5e7eb;
+    --date-color: #6b7280;
+    --link-color: #2563eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f8fafc;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* AcademicPages / Minimal-Mistakes-like layout */
+.site {
+    /* wider on desktop to reduce unnecessary wrapping */
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem;
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: 3rem;
+    align-items: start;
+}
+
+.sidebar {
+    position: sticky;
+    top: 1.5rem;
+    align-self: start;
+}
+
+.author-card {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.25rem;
+    box-shadow: 0 10px 30px rgba(17, 24, 39, 0.06);
+}
+
+.author-avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 999px;
+    overflow: hidden;
+    border: 3px solid var(--border-color);
+    display: grid;
+    place-items: center;
+    margin: 0 auto 1rem;
+}
+
+.author-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.author-avatar-fallback {
+    width: 100%;
+    height: 100%;
+    background: #f3f4f6;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 2.2rem;
+    letter-spacing: 0.04em;
+    display: grid;
+    place-items: center;
+}
+
+.author-name {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin-bottom: 0.35rem;
+}
+
+.author-bio {
+    color: var(--muted-color);
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.author-follow-title {
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.author-follow-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.25rem;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.author-follow-item {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: var(--muted-color);
+    font-size: 0.98rem;
+}
+
+.author-follow-item i {
+    color: var(--muted-color);
+    width: 1.15rem;
+    text-align: center;
+}
+
+.author-follow-item a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.author-follow-item a:hover {
+    text-decoration: underline;
+}
+
+.author-nav {
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.author-nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.98rem;
+}
+
+.author-nav a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.page-title {
+    font-size: 2rem;
+    line-height: 1.25;
+    margin: 0 0 1rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    margin: 0 0 1.75rem;
+}
+
+.page {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 2rem 2.25rem;
+    box-shadow: 0 10px 30px rgba(17, 24, 39, 0.05);
+}
+
+.page-section {
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    margin-bottom: 2.25rem;
+    box-shadow: none;
+    scroll-margin-top: 1.25rem;
+}
+
+.page-section h2 {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    position: relative;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.page-section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 52px;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--secondary-color), rgba(37, 99, 235, 0.25));
+}
+
+a {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+.content {
+    color: var(--text-color);
+    font-size: 1.02rem;
+}
+
+.content p {
+    margin: 0 0 0.9rem;
+}
+
+.content p:last-child {
+    margin-bottom: 0;
+}
+
+.about-note {
+    margin-top: 1.1rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 12px;
+    background: #f8fafc;
+}
+
+.about-note strong {
+    color: var(--primary-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 3rem 0;
+    margin-bottom: 3rem;
+}
+
+.profile {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--secondary-color);
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1;
+}
+
+.profile-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+    color: #e0e0e0;
+    font-weight: 500;
+}
+
+section {
+    background-color: var(--section-background);
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+h2 i {
+    color: var(--secondary-color);
+}
+
+.content {
+    line-height: 1.8;
+}
+
+/* Rubric and Entry Styles */
+.rubric {
+    margin-bottom: 2rem;
+}
+
+.entry {
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--secondary-color);
+}
+
+.date {
+    color: var(--date-color);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.rubric-head {
+    color: var(--primary-color);
+    margin: 1.5rem 0 1rem;
+    font-size: 1.3rem;
+}
+
+/* Publication List Styles */
+.publication-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.publication-item {
+    margin-bottom: 1.5rem;
+    padding: 0.75rem 0.9rem 1.05rem;
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 12px;
+    transition: background-color 0.2s ease;
+}
+
+.publication-item:hover {
+    background-color: #f8fafc;
+}
+
+.publication-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.publication-item a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.publication-item a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+
+.teaching-experience ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 0;
+}
+
+.services ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 0;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-category {
+    background-color: var(--background-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.skill-category h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: transparent;
+    color: var(--muted-color);
+    text-align: left;
+    padding: 1.5rem 0;
+    margin-top: 2.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.profile-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.2s;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+}
+
+.profile-link:hover {
+    color: var(--secondary-color);
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.profile-link i {
+    font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .site {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1.75rem 1.1rem;
+    }
+
+    .sidebar {
+        position: static;
+    }
+
+    .author-avatar {
+        width: 130px;
+        height: 130px;
+    }
+
+    .page {
+        padding: 1.5rem 1.25rem;
+        border-radius: 12px;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .profile-img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .profile-content h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    .entry {
+        padding-left: 0.5rem;
+    }
+
+    .profile-links {
+        justify-content: center;
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 0.7rem;
+    }
+
+    .profile-link {
+        font-size: 0.98rem;
+        padding: 0.35rem 0.7rem;
+    }
+}
+
+.edu-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.edu-card {
+    /* Make education entries compact like publication list items */
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    border-left: 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.edu-card:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.edu-date {
+    color: var(--muted-color);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.1rem;
+}
+
+.edu-degree {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.05rem;
+}
+
+.edu-supervisor {
+    font-size: 0.98rem;
+    color: var(--muted-color);
+    margin-bottom: 0.1rem;
+}
+
+.edu-extra {
+    font-size: 0.95rem;
+    color: var(--muted-color);
+}
+
+.internship-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.internship-card {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.internship-card:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.internship-company {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.internship-role {
+    margin-top: 0.35rem;
+    color: var(--muted-color);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.internship-meta {
+    margin-top: 0.2rem;
+    color: var(--muted-color);
+    font-size: 0.98rem;
+}
+
+@media (max-width: 600px) {
+    .edu-card {
+        padding: 1rem 0.7rem;
+    }
+    .edu-degree {
+        font-size: 1.05rem;
+    }
+} 
+
+/* Research Interests */
+.research-interests ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 0;
+}
+
+.research-interests li {
+    display: list-item;
+    background: none;
+    padding: 0;
+    margin-bottom: 0.5rem;
+    border-radius: 0;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Publications */
+.section-subheading {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.publication-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.publication-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.publication-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.publication-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.publication-item a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.publication-item a.publication-badge {
+    display: inline-flex;
+    margin: 0 0 0 10px;
+    vertical-align: -5px;
+    line-height: 1;
+}
+
+.publication-item a.publication-badge:hover {
+    text-decoration: none;
+}
+
+.publication-badge img {
+    display: block;
+    max-width: 100%;
+    height: 20px;
+}
+
+.publication-authors,
+.publication-venue {
+    color: var(--muted-color);
+    font-size: 0.98rem;
+    margin-top: 0.2rem;
+}
+
+
+.teaching-experience ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 0;
+}
+
+.services ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 0;
+}
