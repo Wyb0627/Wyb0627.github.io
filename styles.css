@@ -663,7 +663,7 @@ footer {
     white-space: nowrap;
 }
 
-.publication-resources .publication-badge {
+.publication-item .publication-resources a.publication-badge {
     margin: 0;
     vertical-align: middle;
 }

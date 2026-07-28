@@ -5,7 +5,7 @@
   ```html
   <span class="publication-resources">
     <a class="publication-badge" href="https://huggingface.co/papers/2607.20553" target="_blank" rel="noopener noreferrer">
-        <img src="./HuggingFace-Papers.svg" alt="Hugging Face Papers: 2607.20553" width="94" height="20"/>
+        <img src="./HuggingFace-Papers.svg" alt="2607.20553" width="94" height="20"/>
     </a>
   </span>
   ```
