@@ -653,6 +653,21 @@ footer {
     text-decoration: none;
 }
 
+.publication-resources {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 10px;
+    vertical-align: -5px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.publication-resources .publication-badge {
+    margin: 0;
+    vertical-align: middle;
+}
+
 .publication-badge img {
     display: block;
     max-width: 100%;
